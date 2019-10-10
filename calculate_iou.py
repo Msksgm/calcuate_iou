@@ -45,11 +45,6 @@ def calculate_pos2neg(pred_boxes, gt_boxes, iou_thresh):
     return pos_num
 
 
-def get_unique_list(seq):
-    seen = []
-    return [x for x in seq if x not in seen and not seen.append(x)]
-
-
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--iou_thresh", type=float, default=0.5)
